@@ -1,6 +1,17 @@
 # DICE ROLLER SIM
 This is a Dice Rolling Simulation
 
+Below are some examples of simulations you can run.
+
+Here is a simple histogram of a single roll type (10d20+10 with disadvantage) ran for 5000 simulations:
+![Alt text](/read_me_pics/simulated_roll_distrobution.jpg "Distrobution of Simulated Dice Rolls")
+
+Here is a histogram of an advantage roll type (1d20 with advantage) ran for 5000 simulations:
+![Alt text](/read_me_pics/simulated_advantage_distrobution.jpg "Distrobution of Advantage Rolls")
+
+Here is a normal distribution built curve from a roll type (3d20+5 with advantage) for 5000 simulation and showing an limit (Dnd AC) of 50. This gives the Win & Lose rate of the simulation as seen in the bottom of the sidebar.
+![Alt text](/read_me_pics/simulated_win_lose.jpg "Simulated Win & Lose Ratios")
+
 # Outline
 Maintained by Morgan and Michael
 
