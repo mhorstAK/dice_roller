@@ -1,4 +1,4 @@
-# dice_roller
+# DICE ROLLER SIM
 This is a Dice Rolling Simulation
 
 # Outline
