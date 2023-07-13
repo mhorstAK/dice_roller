@@ -44,7 +44,6 @@ Navigate to the directory containing your docker-compose.yml file.
 
 Run the following command to start the containers:
 
-Copy code
 `docker-compose up -d`
 
 The -d flag runs the containers in detached mode, which means they'll run in the background without occupying your terminal. Docker Compose will automatically start the containers based on the configuration in the docker-compose.yml file.
@@ -54,11 +53,9 @@ Navigate to the directory containing your docker-compose.yml file.
 
 Run the following command to stop the containers:
 
-Copy code
 `docker-compose down`
 
-This command will stop and remove the containers defined in your docker-compose.yml file. Note that volumes defined in the file will not be removed by default.
-
+This command will stop and remove the containers defined in your docker-compose.yml file.
 #### Copy code
 docker-compose restart
 This command will restart the containers defined in your docker-compose.yml file, preserving the existing volumes.
