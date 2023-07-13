@@ -10,6 +10,7 @@ Maintained by Morgan and Michael
 ## Overview
 Repository for...
 
+
 ## Developement Environment Setup
 This repository is setup up to run locally inside a docker container. This isolates and environmental variables when developing in this repo from your local machine. Everyone developing in this manor will be developing in the same environment. Below are the steps to help get set up.
 
@@ -33,11 +34,17 @@ This repository is setup up to run locally inside a docker container. This isola
 
 Python package definitions for this environment are located in the `requirements.txt` file. These get loaded when the the environment get built above. If you are needing to add a new python package for developement update the requirments.txt file accordingly. Then delete any previously build container for this repo in either docker desktop or colima. And then repeat the proccess given above starting at step 5 build image.
 
-##### Method 2 starting APP
 
-docker-compose down
-docker-compose build
-docker-compose up
+#### Method 2 starting APP
+Forcing add down if app is running.
+`docker-compose down`
+
+Builds the image
+`docker-compose build`
+
+Start up
+`docker-compose up`
+
 
 #### Starting the containers
 Navigate to the directory containing your docker-compose.yml file.
@@ -48,6 +55,7 @@ Run the following command to start the containers:
 
 The -d flag runs the containers in detached mode, which means they'll run in the background without occupying your terminal. Docker Compose will automatically start the containers based on the configuration in the docker-compose.yml file.
 
+
 #### Stopping the containers
 Navigate to the directory containing your docker-compose.yml file.
 
@@ -56,9 +64,10 @@ Run the following command to stop the containers:
 `docker-compose down`
 
 This command will stop and remove the containers defined in your docker-compose.yml file.
+
+
 #### Copy code
 docker-compose restart
 This command will restart the containers defined in your docker-compose.yml file, preserving the existing volumes.
 
 By using these commands, you can easily start, stop, and restart your containers while ensuring that the necessary dependencies and relationships between containers are maintained.
-
