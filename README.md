@@ -33,7 +33,7 @@ This repository is setup up to run locally inside a docker container. This isola
 
 Python package definitions for this environment are located in the `requirements.txt` file. These get loaded when the the environment get built above. If you are needing to add a new python package for developement update the requirments.txt file accordingly. Then delete any previously build container for this repo in either docker desktop or colima. And then repeat the proccess given above starting at step 5 build image.
 
-##### Method 2 starting APP and Database
+##### Method 2 starting APP
 
 docker-compose down
 docker-compose build
@@ -47,7 +47,7 @@ Run the following command to start the containers:
 Copy code
 `docker-compose up -d`
 
-The -d flag runs the containers in detached mode, which means they'll run in the background without occupying your terminal. Docker Compose will automatically start the containers based on the configuration in the docker-compose.yml file. If your app container depends on the database container, as specified in your configuration, Docker Compose will ensure that the database container starts before the app container.
+The -d flag runs the containers in detached mode, which means they'll run in the background without occupying your terminal. Docker Compose will automatically start the containers based on the configuration in the docker-compose.yml file.
 
 #### Stopping the containers
 Navigate to the directory containing your docker-compose.yml file.
