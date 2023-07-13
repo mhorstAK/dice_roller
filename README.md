@@ -36,7 +36,7 @@ Python package definitions for this environment are located in the `requirements
 
 
 #### Method 2 starting APP
-Forcing add down if app is running.
+Close app if app is running.
 `docker-compose down`
 
 Builds the image
