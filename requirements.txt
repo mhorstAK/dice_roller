@@ -1,0 +1,13 @@
+# python libraries Note: When running this in visual studio in a docker container install the jupyter extensions so that you can access a python kernal.
+jupyter
+seaborn
+pandas
+numpy
+requests
+psycopg2
+networkx
+streamlit
+altair
+scipy
+statistics
+memory-profiler

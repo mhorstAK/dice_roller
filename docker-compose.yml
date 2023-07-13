@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - .:/app:cached
+    ports:
+      - "8501:8501"
+    command: streamlit run apps/streamlit_app.py --server.port 8501 --server.address 0.0.0.0
+    deploy:
+      resources:
+        limits:
+          memory: 12G
+volumes:
+  db-data:
