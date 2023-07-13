@@ -7,7 +7,7 @@ import seaborn as sns
 import altair as alt
 
 # -- Set page config
-apptitle = 'About Page'
+apptitle = 'Dice Roller'
 st.set_page_config(page_title=apptitle, page_icon=":eyeglasses:")
 
 # Title the app
@@ -35,15 +35,29 @@ simulations = st.sidebar.selectbox(
     'Number of simulations?',
     (10,100,500,1000,2000,5000))
 
+adv_state = st.sidebar.selectbox(
+    'Advantage or Disadvantage?',
+    ('None', 'adv', 'dis_adv'))
+
 limit = st.sidebar.number_input('Number to beat (Limit)?')
 
 disable_histogram = st.sidebar.checkbox("Disable histogram", key="disable")
 
-enable_normal_dis = st.sidebar.checkbox("Enable noraml distribution", key="noraml")
+enable_normal_dis = st.sidebar.checkbox("Enable normal distribution", key="normal")
 
 enable_limit = st.sidebar.checkbox("Enable limit", key="limit")
 
-list_rolls = roller(dice_roles, sides_of_dice, simulations, modifier)
+if adv_state == 'adv':
+    advantage = True
+    disadvantage = False
+elif adv_state == 'dis_adv':
+    advantage = False
+    disadvantage = True
+else:
+    advantage = False
+    disadvantage = False
+
+list_rolls = roller(dice_roles, sides_of_dice, simulations, modifier, advantage, disadvantage)
 
 df_rolls = pd.DataFrame(list_rolls, columns =['roll_values'])
 
