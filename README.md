@@ -71,3 +71,10 @@ This command will stop and remove the containers defined in your docker-compose.
 This command will restart the containers defined in your docker-compose.yml file, preserving the existing volumes.
 
 By using these commands, you can easily start, stop, and restart your containers while ensuring that the necessary dependencies and relationships between containers are maintained.
+
+
+## Running Streamlit Application
+
+Once you build the app you can go to any browser on the system that is hosting the app and typ in `http://localhost:8501/` into the URL.
+
+The app should appear and be interacting. If you select `always rerun` the app will update as soon as the code files are saved making the developement loop very quick.
