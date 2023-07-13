@@ -65,9 +65,7 @@ Run the following command to stop the containers:
 
 This command will stop and remove the containers defined in your docker-compose.yml file.
 
-
-#### Copy code
-docker-compose restart
+`docker-compose restart`
 This command will restart the containers defined in your docker-compose.yml file, preserving the existing volumes.
 
 By using these commands, you can easily start, stop, and restart your containers while ensuring that the necessary dependencies and relationships between containers are maintained.
